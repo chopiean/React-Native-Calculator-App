@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput } from "react-native";
+import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Calculator() {
   const [a, setA] = useState<string>("");
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: "#fff",
   },
-  resuleText: {
+  resultText: {
     fontSize: 22,
     marginBottom: 20,
     fontWeight: "600",
