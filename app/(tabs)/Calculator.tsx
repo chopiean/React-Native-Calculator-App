@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TextInput } from "react-native";
 
 export default function Calculator() {
   const [a, setA] = useState<string>("");
@@ -33,4 +34,36 @@ export default function Calculator() {
     }
     setResult(n1 - n2);
   };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.resultText}>Result : {result}</Text>
+
+      <TextInput
+        style={styles.input}
+        value={a}
+        onChangeText={setA}
+        placeholder="First number"
+        keyboardType="numeric"
+      ></TextInput>
+
+      <TextInput
+        style={styles.input}
+        value={b}
+        onChangeText={setB}
+        placeholder="Second number"
+        keyboardType="numeric"
+      ></TextInput>
+
+      <View style={styles.buttonRow}>
+        <View style={styles.buttonBox}>
+          <Button title="+" onPress={handleSum}></Button>
+        </View>
+
+        <View style={styles.buttonBox}>
+          <Button title="-" onPress={handleSubtract}></Button>
+        </View>
+      </View>
+    </View>
+  );
 }
