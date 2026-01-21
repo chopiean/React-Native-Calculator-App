@@ -12,4 +12,14 @@ export default function Calculator() {
     const n = Number(cleaned);
     return Number.isNaN(n) ? null : n;
   };
+  const handleSum = () => {
+    const n1 = toNumber(a);
+    const n2 = toNumber(b);
+
+    if ((n1 === null) | (n2 === null)) {
+      Alert.alert("Invalid input", "Please input valid number");
+      return;
+    }
+    setResult(n1 + n2);
+  };
 }
