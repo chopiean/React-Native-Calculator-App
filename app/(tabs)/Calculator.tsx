@@ -67,3 +67,35 @@ export default function Calculator() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#fff",
+  },
+  resuleText: {
+    fontSize: 22,
+    marginBottom: 20,
+    fontWeight: "600",
+  },
+  input: {
+    width: 220,
+    borderWidth: 1,
+    borderColor: "#bbb",
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginVertical: 6,
+    borderRadius: 4,
+  },
+  buttonRow: {
+    flexDirection: "row",
+    marginTop: 16,
+  },
+  buttonBox: {
+    width: 70,
+    marginHorizontal: 12,
+  },
+});
